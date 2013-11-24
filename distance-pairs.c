@@ -93,7 +93,8 @@ int main(int argc, char **argv) {
       for (d = 0; d < size; ++ d) vec2[d] /= len;
       dist = 0;
       for (d = 0; d < size; ++ d) dist += vec1[d] * vec2[d];
-      fprintf(fout, "%s\t%s\t%f\n", st1, st2, dist);
+      dist *= 5;
+      fprintf(fout, "%s\t%s\t%.3f\n", st1, st2, dist);
     }
   }
   fclose(fin);
